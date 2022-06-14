@@ -1,6 +1,7 @@
 package org.github.clockworm.dynamic.datasource.properties;
 
 import lombok.Data;
+import mybatis.mate.config.HikariConfig;
 import mybatis.mate.provider.HikariDataSourceProvider;
 import mybatis.mate.provider.IDataSourceProvider;
 import org.apache.commons.lang3.StringUtils;
@@ -20,6 +21,7 @@ public class DataSourceProperties {
     private String jdbcUrl;
     private String username;
     private String password;
+    private HikariConfig hikari;
 
 
     @Bean
