@@ -32,6 +32,14 @@ public class SpringBeanUtil implements BeanFactoryAware {
         beanFactory.registerBeanDefinition(beanName, beanDefinition);
     }
 
+    public static Object getBean(String beanName) {
+        return beanFactory.getBean(beanName);
+    }
+
+    public static Object getBean(Class clazz) {
+        return beanFactory.getBean(clazz);
+    }
+
     public static void removeBean(String beanName) {
         beanFactory.removeBeanDefinition(beanName);
     }

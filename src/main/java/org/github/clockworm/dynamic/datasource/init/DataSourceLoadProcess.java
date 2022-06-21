@@ -70,7 +70,7 @@ public class DataSourceLoadProcess {
         for (Site site : sites) {
             String jdbcUrl = properties.getJdbcUrl();
             DataSourceProperty odmDataSourceProperty = new DataSourceProperty();
-            odmDataSourceProperty.setKey(site.getName());
+            odmDataSourceProperty.setKey(site.getCode());
             odmDataSourceProperty.setDriverClassName(properties.getDriverClass());
             String odmJdbcUrl = String.format(properties.getJdbcUrl(), properties.getPrimary().concat(site.getCode()));
             odmDataSourceProperty.setUrl(odmJdbcUrl);
